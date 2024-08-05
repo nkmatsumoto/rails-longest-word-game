@@ -1,0 +1,10 @@
+<div class="container">
+  <h1> Results </h1>
+  <p> Letters: <%= params[:letters] %>  </p>
+  <ul>
+    <li> Attempted word: <%= params[:attempt] %></li>
+  </ul>
+  <p> Score: <%= session[:score] %></p>
+  <p> <%= @message %></p>
+  <%= link_to 'Try again', new_path, class: 'btn btn-primary'  %>
+</div>

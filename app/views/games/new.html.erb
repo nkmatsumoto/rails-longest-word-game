@@ -1,0 +1,24 @@
+<div>
+  <h1>New Game</h1>
+  <div class="container">
+    <div class="row">
+      <% if @letters.any? %>
+        <% @letters.each do |letter| %>
+          <div class="col-1 container border justify-content-center"> <h3 class="text-center"> <%= letter %> </h3></div>
+        <% end %>
+      <% else %>
+      <p>No letters found</p>
+      <% end %>
+
+        <form action="/score" method="POST" data-turbo="false">
+          <div class="form-group col-6 mt-4">
+            <input type="hidden" name="letters" value="<%= @letters.join %>" >
+            <label for="answer">What is the longest word you can find?</label>
+            <input type="text" class="form-control col-4" id="answer" placeholder="type your answer..." name="attempt">
+          </div>
+          <input type="submit" class="btn btn-primary mt-2" value="Play">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        </form>
+    </div>
+  </div>
+</div>
