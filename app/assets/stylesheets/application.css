@@ -1,15 +1,49 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400');
+
+body {
+  font-family: Roboto;
+  font-weight: 300;
+  padding: 0 24px;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+/* Adjusted styles for letters */
+.letters {
+  font-size: 24px;
+  background-color: #164183;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 4px 12px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensures vertical centering */
+  height: 100%; /* Keeps the letter centered inside the container */
+}
+
+.letters h3 {
+  margin: 0; /* Remove default margin */
+  padding: 8px; /* Remove default padding */
+  line-height: 1; /* Adjust the line height if needed */
+}
+
+.form-prefix {
+  margin-top: 2em;
+}
+
+.btn {
+    background-color: #b75c5c; /* Change the button background color */
+    color: white; /* Change the text color */
+    border: none; /* Remove border (optional) */
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 16px; /* Round the corners (optional) */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .btn:hover {
+    background-color: #2980b9; /* Change color on hover */
+  }
